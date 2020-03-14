@@ -1,4 +1,18 @@
 package com.google.vitaly.mvpapp
 
-class App {
+import android.app.Application
+
+class App(): Application() {
+    override fun onCreate() {
+        super.onCreate()
+        INSTANCE = this
+    }
+
+      companion object {
+          private var INSTANCE: App? = null
+          @JvmStatic
+          fun get(): App = INSTANCE!!
+      }
+
+
 }
