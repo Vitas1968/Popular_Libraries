@@ -12,6 +12,9 @@ class App(): Application() {
           private var INSTANCE: App? = null
           @JvmStatic
           fun get(): App = INSTANCE!!
+
+          fun getINSTANCE()=INSTANCE
+
       }
 
 
