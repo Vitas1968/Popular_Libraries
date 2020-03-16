@@ -1,6 +1,7 @@
 package com.google.vitaly.mvpapp.mvp.presenter
 
 import com.google.vitaly.mvpapp.mvp.model.CountersModel
+import com.google.vitaly.mvpapp.mvp.model.IGetBtnFromResources
 import com.google.vitaly.mvpapp.mvp.view.MainView
 
 class MainPresenter(var view: MainView?, private val model: CountersModel, private val button: IGetBtnFromResources): IMainPresenter {
