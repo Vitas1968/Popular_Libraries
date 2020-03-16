@@ -5,13 +5,14 @@ import android.os.Bundle
 import android.view.View
 import com.google.vitaly.mvpapp.R
 import com.google.vitaly.mvpapp.mvp.model.CountersModel
-import com.google.vitaly.mvpapp.mvp.model.util.GetBtnFromResourceImpl
 import com.google.vitaly.mvpapp.mvp.presenter.MainPresenter
 import com.google.vitaly.mvpapp.mvp.view.MainView
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), MainView {
-    private val presenter = MainPresenter(this, CountersModel(), GetBtnFromResourceImpl())
+    private val presenter = MainPresenter(this, CountersModel(),
+        GetBtnFromResourceImpl()
+    )
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
